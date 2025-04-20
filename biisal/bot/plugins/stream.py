@@ -21,16 +21,12 @@ MY_PASS = os.environ.get("MY_PASS", None)
 pass_dict = {}
 pass_db = Database(Var.DATABASE_URL, "ag_passwords")
 
-msg_text ="""<b>‣ ʏᴏᴜʀ ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ! 😎
+msg_text ="""<b>‣ ʏ𝗬𝗼𝘂𝗿 𝗟𝗶𝗻𝗸 𝗚𝗲𝗻𝗲𝗿𝗮𝘁𝗲𝗱😎
 
 ‣ Fɪʟᴇ ɴᴀᴍᴇ : <i>{}</i>
 ‣ Fɪʟᴇ ꜱɪᴢᴇ : {}
 
-🔻 <a href="{}">𝗙𝗔𝗦𝗧 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗</a>
-🔺 <a href="{}">𝗪𝗔𝗧𝗖𝗛 𝗢𝗡𝗟𝗜𝗡𝗘</a>
-
-‣ ɢᴇᴛ <a href="https://t.me/+PA8OPL2Zglk3MDM1">ᴍᴏʀᴇ ғɪʟᴇs</a></b> 🤡"""
-
+\n‣ ❤️𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 : @FILMY_MEN✨🫶</b>"""
 
 
 @StreamBot.on_message((filters.private) & (filters.document | filters.video | filters.audio | filters.photo) , group=4)
@@ -47,7 +43,7 @@ async def private_receive_handler(c: Client, m: Message):
             if user.status == "kicked":
                 await c.send_message(
                     chat_id=m.chat.id,
-                    text="You are banned!\n\n  **Cᴏɴᴛᴀᴄᴛ Support [Support](https://t.me/bisal_files) They Wɪʟʟ Hᴇʟᴘ Yᴏᴜ**",
+                    text="You are banned!\n\n  **Cᴏɴᴛᴀᴄᴛ Support [Support](https://t.me/SYRUS_143_HPY) They Wɪʟʟ Hᴇʟᴘ Yᴏᴜ**",
                     
                     disable_web_page_preview=True
                 )
@@ -55,12 +51,12 @@ async def private_receive_handler(c: Client, m: Message):
         except UserNotParticipant:
             await c.send_photo(
                 chat_id=m.chat.id,
-                photo="https://telegra.ph/file/5eb253f28ed7ed68cb4e6.png",
+                photo="https://graph.org/file/2dffc0cb5d90eb3165d4f-60e50636c5e1648cb4.jpg",
                 caption=""""<b>Hᴇʏ ᴛʜᴇʀᴇ!\n\nPʟᴇᴀsᴇ ᴊᴏɪɴ ᴏᴜʀ ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ ᴛᴏ ᴜsᴇ ᴍᴇ ! 😊\n\nDᴜᴇ ᴛᴏ sᴇʀᴠᴇʀ ᴏᴠᴇʀʟᴏᴀᴅ, ᴏɴʟʏ ᴏᴜʀ ᴄʜᴀɴɴᴇʟ sᴜʙsᴄʀɪʙᴇʀs ᴄᴀɴ ᴜsᴇ ᴛʜɪs ʙᴏᴛ !</b>""",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("Jᴏɪɴ ɴᴏᴡ 🚩", url=f"https://t.me/{Var.UPDATES_CHANNEL}")
+                            InlineKeyboardButton("𝗝𝗼𝗶𝗻 𝗡𝗼𝘄🚩", url=f"https://t.me/{Var.UPDATES_CHANNEL}")
                         ]
                     ]
                 ),
@@ -88,8 +84,8 @@ async def private_receive_handler(c: Client, m: Message):
             text=msg_text.format(get_name(log_msg), humanbytes(get_media_file_size(m)), online_link, stream_link),
             quote=True,
             disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("sᴛʀᴇᴀᴍ 🔺", url=stream_link), #Stream Link
-                                                InlineKeyboardButton('ᴅᴏᴡɴʟᴏᴀᴅ 🔻', url=online_link)]]) #Download Link
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("𝙋𝙡𝙖𝙮🔺", url=stream_link), #Stream Link
+                                                InlineKeyboardButton('𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙🔻', url=online_link)]]) #Download Link
         )
     except FloodWait as e:
         print(f"Sleeping for {str(e.x)}s")
@@ -118,8 +114,8 @@ async def channel_receive_handler(bot, broadcast):
             message_id=broadcast.id,
             reply_markup=InlineKeyboardMarkup(
                 [
-                    [InlineKeyboardButton("sᴛʀᴇᴀᴍ 🔺", url=stream_link),
-                    InlineKeyboardButton('ᴅᴏᴡɴʟᴏᴀᴅ 🔻', url=online_link)] 
+                    [InlineKeyboardButton("𝙋𝙡𝙖𝙮🔺", url=stream_link),
+                    InlineKeyboardButton('𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙🔻', url=online_link)] 
                 ]
             )
         )
