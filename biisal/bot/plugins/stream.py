@@ -84,7 +84,7 @@ async def private_receive_handler(c: Client, m: Message):
             text=msg_text.format(get_name(log_msg), humanbytes(get_media_file_size(m)), online_link, stream_link),
             quote=True,
             disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("▶ 𝙋𝙡𝙖𝙮 ⦿ 𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"/></svg> ", url=stream_link)]]), #Stream Link
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("▶ 𝙋𝙡𝙖𝙮 ⦿ 𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙 ∇", url=stream_link)]]), #Stream Link
                                               
             #Download Link
         )
@@ -115,7 +115,7 @@ async def channel_receive_handler(bot, broadcast):
             message_id=broadcast.id,
             reply_markup=InlineKeyboardMarkup(
                 [
-                    [InlineKeyboardButton("𝙋𝙡𝙖𝙮🔺/ 𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙🔻", url=stream_link),
+                    [InlineKeyboardButton("▶ 𝙋𝙡𝙖𝙮 ⦿ 𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙 ∇", url=stream_link),
                    ] 
                 ]
             )
