@@ -67,7 +67,7 @@ async def private_receive_handler(c: Client, m: Message):
             await m.reply_text(e)
             await c.send_message(
                 chat_id=m.chat.id,
-                text="**Sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ Wʀᴏɴɢ. Cᴏɴᴛᴀᴄᴛ ᴍʏ Support** [Support](https://t.me/bisal_files)",
+                text="**Sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ Wʀᴏɴɢ. Cᴏɴᴛᴀᴄᴛ ᴍʏ Support** [Support](https://t.me/filmy_men)",
                 
                 disable_web_page_preview=True)
             return
@@ -84,7 +84,7 @@ async def private_receive_handler(c: Client, m: Message):
             text=msg_text.format(get_name(log_msg), humanbytes(get_media_file_size(m)), online_link, stream_link),
             quote=True,
             disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("▶ 𝙋𝙡𝙖𝙮 ⦿ 𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙 ∇", url=stream_link)]]), #Stream Link
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("▶ 𝙋𝙡𝙖𝙮 ⦿ 𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙 ⬇️", url=stream_link)]]), #Stream Link
                                               
             #Download Link
         )
@@ -115,7 +115,7 @@ async def channel_receive_handler(bot, broadcast):
             message_id=broadcast.id,
             reply_markup=InlineKeyboardMarkup(
                 [
-                    [InlineKeyboardButton("▶ 𝙋𝙡𝙖𝙮 ⦿ 𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙 ∇", url=stream_link),
+                    [InlineKeyboardButton("▶ 𝙋𝙡𝙖𝙮 ⦿ 𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙 ⬇️", url=stream_link),
                    ] 
                 ]
             )
